@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#180d29">
+<title>For Zayatsetseg ♡</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at center, #49234e, #180d29, #080611);
+    font-family: Georgia, serif;
+    color: white;
+}
+
+.container {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    padding: 20px;
+}
+
+h1 {
+    font-size: clamp(27px, 6vw, 38px);
+    color: #ffd3ed;
+    text-shadow: 0 0 20px #ff69b4;
+    animation: glow 2s infinite alternate;
+}
+
+p {
+    margin: 20px;
+    color: #f5cde9;
+    font-size: 17px;
+}
+
+button {
+    padding: 13px 30px;
+    border: 1px solid #ffb6dc;
+    border-radius: 30px;
+    background: #e85ca4;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff69b4;
+    transition: .3s;
+    font-family: Georgia, serif;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #ff83c4;
+}
+
+/* FLOWERS */
+
+.flower {
+    position: fixed;
+    bottom: -80px;
+    z-index: 1;
+    font-family: "Apple Color Emoji",
+                 "Segoe UI Emoji",
+                 "Noto Color Emoji",
+                 sans-serif;
+    animation: rise linear forwards;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    will-change: transform, opacity;
+}
+
+/* HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    z-index: 2;
+    color: #ff91c8;
+    font-family: "Apple Color Emoji",
+                 "Segoe UI Emoji",
+                 "Noto Color Emoji",
+                 sans-serif;
+    animation: float linear forwards;
+    pointer-events: none;
+    text-shadow: 0 0 15px #ff69b4;
+    will-change: transform, opacity;
+}
+
+/* STARS */
+
+.star {
+    position: fixed;
+    color: #ffe4f3;
+    animation: twinkle 2s infinite alternate;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* MESSAGE */
+
+#message {
+    display: none;
+    width: 100%;
+    max-width: 370px;
+    max-height: 75vh;
+    max-height: 75dvh;
+    overflow-y: auto;
+    line-height: 1.8;
+    color: #ffe0f1;
+    animation: appear 2s ease;
+    scrollbar-width: none;
+    padding: 5px;
+}
+
+#message::-webkit-scrollbar {
+    display: none;
+}
+
+#message h2 {
+    font-size: 30px;
+    color: #ffb6dc;
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px #ff69b4;
+}
+
+#message p {
+    font-size: 16px;
+    line-height: 2;
+    color: #ffe0f1;
+    overflow-wrap: anywhere;
+}
+
+#musicText {
+    display: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ffb6dc;
+}
+
+/* ANIMATIONS */
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(.6);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px pink;
+    }
+
+    to {
+        text-shadow: 0 0 35px hotpink;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: .2;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 29px;
+    }
+
+    #message {
+        max-width: 340px;
+    }
+
+    #message p {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>For My Zayatsetseg ♡</h1>
+
+    <p>
+        2026.11.21
+        <br>
+        Usand orloo gej hudlaa heleed eniig hiilee ♡
+    </p>
+
+    <button onclick="openGift()">
+        Open Your Gift ♡
+    </button>
+
+    <div id="message">
+
+        <h2>Minii Hair ♡</h2>
+
+        <p>
+            Hair n oird chamaigaa zunduu uurluulj
+            gomdooj baigaagaa medej baigaa
+            uneheer uuchlaarai hairiigaa.
+
+            <br><br>
+
+            Hair n chamd say hudlaa helsen
+            usand orloo geed hairdaa iim ym
+            dahiad hiij uguud ineelgej setgel sanaag
+            n demjimeer sanagdaadoo hairaa.
+
+            <br><br>
+
+            Hairtaishuuu eniig haraad saihan
+            amraarai minii hair.
+
+            <br><br>
+
+            Unsey zunduu ih hairtai
+            hyzgaargui hairtai.
+
+            <br><br>
+
+            Ene huvuud bga tsetsegnuud
+            hairiinh n ugj baigaa tsetsegnuudshuu hairaa.
+
+            <br><br>
+
+            Unselt ilgeey.
+
+            <br><br>
+
+            Yarmagiin 3aas KTMS ruu
+            12:58 minutand garlaaa jojojo.
+
+            <br><br>
+
+            I love you so so so so so so
+            so so so so much. ♡
+        </p>
+
+    </div>
+
+    <p id="musicText">
+        ♡ A little melody for you ♡
+    </p>
+
+</div>
+
+<script>
+
+// FLOWERS
+
+const flowers = ["🌸", "🌷", "🌺", "🌼", "💮", "🪷"];
+
+function createFlower() {
+
+    const flower = document.createElement("div");
+
+    flower.className = "flower";
+
+    flower.innerText =
+        flowers[Math.floor(Math.random() * flowers.length)];
+
+    flower.style.left = Math.random() * 100 + "vw";
+
+    flower.style.animationDuration =
+        (7 + Math.random() * 7) + "s";
+
+    flower.style.fontSize =
+        (22 + Math.random() * 22) + "px";
+
+    document.body.appendChild(flower);
+
+    setTimeout(() => flower.remove(), 15000);
+}
+
+setInterval(createFlower, 700);
+
+
+// FLOATING HEARTS
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerText = Math.random() > 0.5 ? "♡" : "♥";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 11000);
+}
+
+setInterval(createHeart, 900);
+
+
+// STARS
+
+for (let i = 0; i < 45; i++) {
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+
+    star.innerText = "✧";
+
+    star.style.left = Math.random() * 100 + "vw";
+
+    star.style.top = Math.random() * 100 + "vh";
+
+    star.style.fontSize =
+        (8 + Math.random() * 12) + "px";
+
+    star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    document.body.appendChild(star);
+}
+
+
+// ROMANTIC PIANO MUSIC
+
+let audioContext;
+let musicTimer;
+let noteIndex = 0;
+
+const melody = [
+    261.63, 329.63, 392.00, 329.63,
+    293.66, 349.23, 440.00, 349.23,
+    261.63, 329.63, 392.00, 523.25,
+    440.00, 392.00, 329.63, 293.66
+];
+
+function playNote() {
+
+    if (!audioContext) return;
+
+    const osc = audioContext.createOscillator();
+
+    const gain = audioContext.createGain();
+
+    osc.type = "sine";
+
+    osc.frequency.value = melody[noteIndex];
+
+    gain.gain.setValueAtTime(
+        0.0001,
+        audioContext.currentTime
+    );
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.12,
+        audioContext.currentTime + 0.05
+    );
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        audioContext.currentTime + 1.1
+    );
+
+    osc.connect(gain);
+
+    gain.connect(audioContext.destination);
+
+    osc.start();
+
+    osc.stop(audioContext.currentTime + 1.2);
+
+    noteIndex = (noteIndex + 1) % melody.length;
+}
+
+
+// OPEN GIFT
+
+function openGift() {
+
+    document.querySelector("h1").style.display = "none";
+
+    document.querySelector(".container > p").style.display = "none";
+
+    document.querySelector("button").style.display = "none";
+
+    document.getElementById("message").style.display = "block";
+
+    document.getElementById("musicText").style.display = "block";
+
+    if (!audioContext) {
+
+        const AudioContextClass =
+            window.AudioContext || window.webkitAudioContext;
+
+        if (AudioContextClass) {
+
+            audioContext = new AudioContextClass();
+
+            audioContext.resume().then(() => {
+
+                playNote();
+
+                musicTimer = setInterval(playNote, 650);
+
+            }).catch(error => {
+                console.log("Audio could not start:", error);
+            });
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
